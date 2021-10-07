@@ -4,6 +4,7 @@ import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.map.IMap;
+import org.springframework.dao.DataAccessResourceFailureException;
 
 public class AnotherExcMain {
     public static void main(String[] args) {
@@ -39,7 +40,11 @@ public class AnotherExcMain {
         HazelcastInstance testInstance = Hazelcast.newHazelcastInstance(config);
         IMap<Integer, Long> exampleMap = testInstance.getMap("exampleCache");
         //exception here
-        exampleMap.get(1);
+        try {
+            exampleMap.get(1);
+        } catch (DataAccessResourceFailureException ex) {
+            System.out.println("yay");
+        }
 
     }
 

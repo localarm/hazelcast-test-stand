@@ -1,8 +1,8 @@
-example/BadSQLMapLoader.java
- example.BadSQLMapLoader
-example/BadSQLGrammar.java
- example.BadSQLGrammar
 example/AnotherExcMain.java
  example.AnotherExcMain
+example/BadSQLGrammarMain.java
+ example.BadSQLGrammarMain
 example/AnotherExcMapLoader.java
  example.AnotherExcMapLoader
+example/BadSQLMapLoader.java
+ example.BadSQLMapLoader
